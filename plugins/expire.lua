@@ -15,7 +15,7 @@ local function check_member_superrem2(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
-	  chat_del_user(get_receiver(msg), 'user#id'..234724442, ok_cb, false)
+	  chat_del_user(get_receiver(msg), 'user#id'..188405914, ok_cb, false)
 	  leave_channel(get_receiver(msg), ok_cb, false)
     end
   end
@@ -82,7 +82,7 @@ function run(msg, matches)
 		local buytime = tonumber(os.time())
 		local timeexpire = tonumber(buytime) + (tonumber(matches[2]) * 86400)
 		redis:hset('expiretime',get_receiver(msg),timeexpire)
-		return "<i>✨تاریخ انقضای گروه✨:\n✨به "..matches[2].. " روز دیگر تنظیم شد.\nسایت رسمی:Tarfand.pro✨</i>"
+		return "<i>✨تاریخ انقضای گروه✨:\n✨به "..matches[2].. " روز دیگر تنظیم شد.\n@fariborziii✨</i>"
 	end
 	if matches[1]:lower() == 'expire' then
 		local expiretime = redis:hget ('expiretime', get_receiver(msg))
